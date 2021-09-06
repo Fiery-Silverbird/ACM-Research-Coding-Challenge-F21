@@ -30,3 +30,10 @@ Submissions will be evaluated holistically and based on a combination of effort,
 
 Regardless if you can or cannot answer the question, provide a short explanation of how you got your solution or how you think it can be solved in your README.md file. However, we highly recommend giving the challenge a try, you just might learn something new!
 
+## Solution
+
+I used the VADER Sentiment Analysis library to analyze the input text file for a sentimental analysis rating
+which returned an overall sentiment score of 0.9978 when passed as a whole block of text, implying that the overall text is positive. 
+I also passed individual sentences to the VADER Sentiment Analysis library with the help of the nltk library's tokenize function and the average score from the compound score of 
+the sentimental analysis of each line was also positive with a value of 0.1206. This is a far better result than I expected as through my readthrough, I deduced the intent of the first paragraph to be a comedic play of sorts with the exaggerated descriptions of the reactions of people with an overall positive sentiment as it was making a joke/light of the situation and the second paragraph was overwhelmingly positive. I expected the analyzer to misunderstand the intent
+in the first paragraph and skew towards the negative as it was filled with negatively connotated words such as rage, murder etc but instead it deduced the whole text as positive regardless of the six negatively connotated sentences in the text.
